@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <%= content_tag :div, nil,
+      id: "hello-react",
+      data: {
+        message: 'Hello!',
+        name: 'Tom'
+    }.to_json %>
     <%= yield %>
+
+    <%= javascript_pack_tag 'hello_react' %>
   </body>
 </html>
